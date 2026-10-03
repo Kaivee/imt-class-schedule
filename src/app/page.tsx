@@ -97,6 +97,8 @@ export default function Home() {
   const [scheduleJson, setScheduleJson] = useState("");
   const [showUploader, setShowUploader] = useState(false);
   const [uploadingPdf, setUploadingPdf] = useState(false);
+  const [weeks, setWeeks] = useState<any[]>([]);
+  const [selectedWeekUrl, setSelectedWeekUrl] = useState<string>("base");
 
   const students = data.students as Student[];
   const schedule = data.schedule as ScheduleSlot[];
@@ -104,6 +106,15 @@ export default function Home() {
   // Removed localStorage logic so the grid reliably loads baseData
   useEffect(() => {
     localStorage.removeItem("timetable_data");
+    // Fetch uploaded weeks
+    fetch("/api/list-weeks")
+      .then(r => r.json())
+      .then(data => {
+        if (data.success && data.blobs) {
+          setWeeks(data.blobs);
+        }
+      })
+      .catch(console.error);
   }, []);
 
   const student = useMemo(() => {
@@ -211,45 +222,26 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-wrap gap-2">
-              <button
-                className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200"
-                disabled={uploadingPdf}
-                onClick={() => {
-                  document.getElementById("pdf-upload")?.click();
-                }}
-              >
-                {uploadingPdf ? "Uploading..." : "Upload PDF"}
-              </button>
-              <input
-                type="file"
-                id="pdf-upload"
-                accept=".pdf,application/pdf"
-                className="hidden"
-                onChange={async (e) => {
-                  const f = e.target.files?.[0];
-                  if (f) {
-                    setUploadingPdf(true);
-                    const formData = new FormData();
-                    formData.append("file", f);
-                    try {
-                      const res = await fetch("/api/upload", { method: "POST", body: formData });
-                      if (res.ok) {
-                        alert("PDF uploaded successfully! (Note: the grid currently displays your base data)");
-                      } else {
-                        alert("Failed to upload PDF.");
-                      }
-                    } catch (err) {
-                      alert("Error uploading PDF.");
-                    } finally {
-                      setUploadingPdf(false);
-                    }
-                  }
-                }}
-              />
+              <div className="flex flex-col">
+                <label className="mb-2 block text-sm font-medium text-gray-700">Select Week</label>
+                <select 
+                  className="rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={selectedWeekUrl}
+                  onChange={(e) => setSelectedWeekUrl(e.target.value)}
+                >
+                  <option value="base">Base Week (Personalized Grid)</option>
+                  {weeks.map((w, i) => {
+                    const name = w.pathname.replace('schedules/', '').replace('.pdf', '');
+                    return (
+                      <option key={i} value={w.url}>{name}</option>
+                    )
+                  })}
+                </select>
+              </div>
             </div>
           </div>
 
-          {rollNo && !student && (
+          {selectedWeekUrl === "base" && rollNo && !student && (
             <div className="mt-4 rounded-lg bg-red-50 p-3 text-red-700">
               Roll number not found. Please check and try again.
             </div>
@@ -285,7 +277,13 @@ export default function Home() {
           )}
         </div>
 
-        {student && filteredSchedule.length === 0 && (
+        {selectedWeekUrl !== "base" && (
+          <div className="rounded-lg bg-white p-4 shadow-sm h-[800px]">
+            <iframe src={selectedWeekUrl} className="w-full h-full rounded border-0" />
+          </div>
+        )}
+
+        {selectedWeekUrl === "base" && student && filteredSchedule.length === 0 && (
           <div className="rounded-lg bg-white p-6 text-center shadow-sm">
             <p className="text-gray-600">
               No classes found for your enrolled courses in the current
@@ -294,7 +292,7 @@ export default function Home() {
           </div>
         )}
 
-        {student && filteredSchedule.length > 0 && (
+        {selectedWeekUrl === "base" && student && filteredSchedule.length > 0 && (
           <div className="overflow-x-auto rounded-lg bg-white shadow-sm border border-gray-200">
             <table className="min-w-full divide-y divide-gray-200 table-fixed">
               <thead className="bg-gray-50">
