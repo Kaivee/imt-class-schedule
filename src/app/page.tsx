@@ -1,7 +1,9 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import baseData from "@/data/timetable_data.json";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 type ScheduleSlot = {
   day: string;
@@ -99,6 +101,8 @@ export default function Home() {
   const [uploadingPdf, setUploadingPdf] = useState(false);
   const [weeks, setWeeks] = useState<any[]>([]);
   const [selectedWeekUrl, setSelectedWeekUrl] = useState<string>("base");
+  const [exporting, setExporting] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const students = data.students as Student[];
   const schedule = data.schedule as ScheduleSlot[];
@@ -191,6 +195,25 @@ export default function Home() {
     return code;
   };
 
+  const exportPDF = async () => {
+    if (!gridRef.current || !student) return;
+    setExporting(true);
+    try {
+      const canvas = await html2canvas(gridRef.current, { scale: 2 });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('landscape', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 10, pdfWidth, pdfHeight);
+      pdf.save(`Timetable_${student.rollNo}.pdf`);
+    } catch (err) {
+      console.error("Failed to export PDF", err);
+      alert("Failed to export PDF.");
+    } finally {
+      setExporting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
       <main className="mx-auto max-w-6xl">
@@ -221,7 +244,7 @@ export default function Home() {
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-end">
               <div className="flex flex-col">
                 <label className="mb-2 block text-sm font-medium text-gray-700">Select Week</label>
                 <select 
@@ -238,6 +261,16 @@ export default function Home() {
                   })}
                 </select>
               </div>
+              
+              {selectedWeekUrl === "base" && student && filteredSchedule.length > 0 && (
+                <button
+                  onClick={exportPDF}
+                  disabled={exporting}
+                  className="ml-auto rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+                >
+                  {exporting ? "Saving..." : "Save as PDF"}
+                </button>
+              )}
             </div>
           </div>
 
@@ -293,8 +326,11 @@ export default function Home() {
         )}
 
         {selectedWeekUrl === "base" && student && filteredSchedule.length > 0 && (
-          <div className="overflow-x-auto rounded-lg bg-white shadow-sm border border-gray-200">
-            <table className="min-w-full divide-y divide-gray-200 table-fixed">
+          <div ref={gridRef} className="overflow-x-auto rounded-lg bg-white shadow-sm border border-gray-200">
+            <div className="p-4 bg-white border-b border-gray-200 block md:hidden">
+              <h3 className="text-lg font-bold">{student.name} ({student.rollNo})</h3>
+            </div>
+            <table className="min-w-full divide-y divide-gray-200 table-fixed bg-white">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="w-32 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 border-r border-gray-200">
