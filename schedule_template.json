@@ -1,0 +1,417 @@
+[
+  {
+    "day": "Mon",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CM-A(1)\nHS{C -201}"
+  },
+  {
+    "day": "Mon",
+    "time": "02:00 -03:15 pm",
+    "slotText": "CWB-C(1)\nPJ{C -201}"
+  },
+  {
+    "day": "Mon",
+    "time": "03:30 -04:45 pm",
+    "slotText": "CWB-B(1)\nPJ{C -201}"
+  },
+  {
+    "day": "Mon",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CWB-A(1)\nAS{C -403}"
+  },
+  {
+    "day": "Mon",
+    "time": "02:00 -03:15 pm",
+    "slotText": "CRM-A(1)\nAB{C - 403}"
+  },
+  {
+    "day": "Mon",
+    "time": "03:30 -04:45 pm",
+    "slotText": "CTM-A(1)\nSM{C -403}"
+  },
+  {
+    "day": "Mon",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CRA-A(1)\nTK{Chandragupta}"
+  },
+  {
+    "day": "Mon",
+    "time": "02:00 -03:15 pm",
+    "slotText": "CRA-A(2)\nTK{Chandragupta}"
+  },
+  {
+    "day": "Mon",
+    "time": "06:45-08:00 pm",
+    "slotText": "BF-A(1)\nHSM{C - 201}"
+  },
+  {
+    "day": "Mon",
+    "time": "10:15 -11:30 am",
+    "slotText": "CSIW-A(1)\nRS{C -201}"
+  },
+  {
+    "day": "Mon",
+    "time": "08:45 -10:00 am",
+    "slotText": "LDM-A(1)\nGM{Gurukul}"
+  },
+  {
+    "day": "Mon",
+    "time": "10:15 -11:30 am",
+    "slotText": "LDM-A(2)\nGM{Gurukul}"
+  },
+  {
+    "day": "Mon",
+    "time": "08:45 -10:00 am",
+    "slotText": "FTBA-B(1)\nRKR{Eklavya}"
+  },
+  {
+    "day": "Mon",
+    "time": "10:15 -11:30 am",
+    "slotText": "FTBA-B(2)\nRKR{Eklavya}"
+  },
+  {
+    "day": "Mon",
+    "time": "08:45 -10:00 am",
+    "slotText": "MDP-A(1)\nRPL{Analytics}"
+  },
+  {
+    "day": "Mon",
+    "time": "10:15 -11:30 am",
+    "slotText": "MDP-A(2)\nRPL{Analytics}"
+  },
+  {
+    "day": "Mon",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "BIBC-A(1)\nPG{Chandragupta}"
+  },
+  {
+    "day": "Mon",
+    "time": "10:15 -11:30 am",
+    "slotText": "CCR-A(1)\nGD{Chandragupta}"
+  },
+  {
+    "day": "Tue",
+    "time": "10:15 -11:30 am",
+    "slotText": "CWB-C(2)\nPJ{C -201}"
+  },
+  {
+    "day": "Tue",
+    "time": "08:45 -10:00 am",
+    "slotText": "CRM-A(2)\nAB{C -403}"
+  },
+  {
+    "day": "Tue",
+    "time": "10:15 -11:30 am",
+    "slotText": "CRM-A(3)\nAB{C -403}"
+  },
+  {
+    "day": "Tue",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "LEX-A(1)\nBG/RS{C -201}"
+  },
+  {
+    "day": "Tue",
+    "time": "02:00 -03:15 pm",
+    "slotText": "LEX-A(2)\nBG/RS{C -201}"
+  },
+  {
+    "day": "Tue",
+    "time": "08:45 -10:00 am",
+    "slotText": "BAM-B(1)\nFM{Eklavya}"
+  },
+  {
+    "day": "Tue",
+    "time": "10:15 -11:30 am",
+    "slotText": "BAM-B(2)\nFM{Eklavya}"
+  },
+  {
+    "day": "Tue",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "ITC-A(1)\nRK{Analytics}"
+  },
+  {
+    "day": "Tue",
+    "time": "10:15 -11:30 am",
+    "slotText": "CCR-A(2)\nGD{Chandragupta}"
+  },
+  {
+    "day": "Tue",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CCR-A(3)\nGD{Chandragupta}"
+  },
+  {
+    "day": "Wed",
+    "time": "08:45 -10:00 am",
+    "slotText": "CM-A(2)\nHS{C -201}"
+  },
+  {
+    "day": "Wed",
+    "time": "10:15 -11:30 am",
+    "slotText": "CM-A(3)\nHS{C -201}"
+  },
+  {
+    "day": "Wed",
+    "time": "10:15 -11:30 am",
+    "slotText": "CWB-A(2)\nAS{C -403}"
+  },
+  {
+    "day": "Wed",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "DSCS-A(1)\nMS{C -403}"
+  },
+  {
+    "day": "Wed",
+    "time": "02:00 -03:15 pm",
+    "slotText": "DSCS-A(2)\nMS{C -403}"
+  },
+  {
+    "day": "Wed",
+    "time": "10:15 -11:30 am",
+    "slotText": "BAM-A(1)\nST{Eklavya}"
+  },
+  {
+    "day": "Wed",
+    "time": "08:45 -10:00 am",
+    "slotText": "BIBC-A(2)\nPG{Chandragupta}"
+  },
+  {
+    "day": "Wed",
+    "time": "10:15 -11:30 am",
+    "slotText": "BIBC-A(3)\nPG{Chandragupta}"
+  },
+  {
+    "day": "Wed",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CCR-A(4)\nGD{Chandragupta}"
+  },
+  {
+    "day": "Fri",
+    "time": "10:15 -11:30 am",
+    "slotText": "CWB-B(2)\nPJ{C -201}"
+  },
+  {
+    "day": "Fri",
+    "time": "08:45 -10:00 am",
+    "slotText": "CTM-A(2)\nSM{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "10:15 -11:30 am",
+    "slotText": "CTM-A(3)\nSM{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "05:15 -06:30 pm",
+    "slotText": "PDRM-A(1)\nJC{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "06:45-08:00 pm",
+    "slotText": "PDRM-A(2)\nJC{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "05:15 -06:30 pm",
+    "slotText": "VCPE-A(1)\nTC{C -403}"
+  },
+  {
+    "day": "Fri",
+    "time": "06:45-08:00 pm",
+    "slotText": "VCPE-A(2)\nTC{C -403}"
+  },
+  {
+    "day": "Fri",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "LEX-A(3)\nBG/RS{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "02:00 -03:15 pm",
+    "slotText": "LEX-A(4)\nBG/RS{C -202}"
+  },
+  {
+    "day": "Fri",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "DSCS-A(3)\nMS{C -403}"
+  },
+  {
+    "day": "Fri",
+    "time": "02:00 -03:15 pm",
+    "slotText": "DSCS-A(4)\nMS{C -403}"
+  },
+  {
+    "day": "Fri",
+    "time": "08:45 -10:00 am",
+    "slotText": "FTBA-A(1)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Fri",
+    "time": "10:15 -11:30 am",
+    "slotText": "FTBA-A(2)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Fri",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "ITC-A(2)\nRK{Analytics}"
+  },
+  {
+    "day": "Fri",
+    "time": "02:00 -03:15 pm",
+    "slotText": "EF-A(1)\nTC{C -403}"
+  },
+  {
+    "day": "Fri",
+    "time": "03:30 -04:45 pm",
+    "slotText": "EF-A(2)\nTC{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "08:45 -10:00 am",
+    "slotText": "PDRM-B(1)\nJC{C -202}"
+  },
+  {
+    "day": "Sat",
+    "time": "10:15 -11:30 am",
+    "slotText": "PDRM-B(2)\nJC{C -202}"
+  },
+  {
+    "day": "Sat",
+    "time": "08:45 -10:00 am",
+    "slotText": "VCPE-A(3)\nTC{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "10:15 -11:30 am",
+    "slotText": "VCPE-A(4)\nTC{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "CSIW-A(2)\nRS{C -201}"
+  },
+  {
+    "day": "Sat",
+    "time": "02:00 -03:15 pm",
+    "slotText": "CSIW-A(3)\nRS{C -201}"
+  },
+  {
+    "day": "Sat",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "LDM-A(3)\nGM{C -202}"
+  },
+  {
+    "day": "Sat",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "FTBA-B(3)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Sat",
+    "time": "02:00 -03:15 pm",
+    "slotText": "FTBA-B(4)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Sat",
+    "time": "03:30 -04:45 pm",
+    "slotText": "FTBA-A(3)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Sat",
+    "time": "05:15 -06:30 pm",
+    "slotText": "FTBA-A(4)\nSKS{Eklavya}"
+  },
+  {
+    "day": "Sat",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "MDP-A(3)\nRPL{Analytics}"
+  },
+  {
+    "day": "Sat",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "HRST-A(1)\nSNS{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "02:00 -03:15 pm",
+    "slotText": "EF-A(3)\nTC{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "03:30 -04:45 pm",
+    "slotText": "EF-A(4)\nTC{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "05:15 -06:30 pm",
+    "slotText": "HRST-A(2)\nSNS{C -403}"
+  },
+  {
+    "day": "Sat",
+    "time": "06:45-08:00 pm",
+    "slotText": "HRST-A(3)\nSNS{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "10:15 -11:30 am",
+    "slotText": "PAF-A(1)\nPA{C -202}"
+  },
+  {
+    "day": "Sun",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "PAF-A(2)\nPA{C -202}"
+  },
+  {
+    "day": "Sun",
+    "time": "05:15 -06:30 pm",
+    "slotText": "VCPE-A(5)\nTC{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "06:45-08:00 pm",
+    "slotText": "VCPE-A(6)\nTC{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "10:15 -11:30 am",
+    "slotText": "BAM-B(3)\nFM{Eklavya}"
+  },
+  {
+    "day": "Sun",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "BAM-B(4)\nFM{Eklavya}"
+  },
+  {
+    "day": "Sun",
+    "time": "02:00 -03:15 pm",
+    "slotText": "BAM-A(2)\nST{Eklavya}"
+  },
+  {
+    "day": "Sun",
+    "time": "03:30 -04:45 pm",
+    "slotText": "BAM-A(3)\nST{Eklavya}"
+  },
+  {
+    "day": "Sun",
+    "time": "08:45 -10:00 am",
+    "slotText": "EF-A(5)\nTC{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "10:15 -11:30 am",
+    "slotText": "EF-A(6)\nTC{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "11:45 am -01:00 pm",
+    "slotText": "HRST-A(4)\nSNS{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "02:00 -03:15 pm",
+    "slotText": "HRST-A(5)\nSNS{C -403}"
+  },
+  {
+    "day": "Sun",
+    "time": "03:30 -04:45 pm",
+    "slotText": "HRST-A(6)\nSNS{C -403}"
+  }
+]
