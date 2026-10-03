@@ -144,12 +144,21 @@ export default function Home() {
     
     // Sort times
     const parseTime = (tStr: string) => {
-      const match = tStr.match(/(\d{2}):(\d{2})/);
+      const match = tStr.match(/(\d{2}):(\d{2})\s*(am|pm)?/i);
       if (!match) return 0;
       let h = parseInt(match[1], 10);
       const m = parseInt(match[2], 10);
-      if (tStr.toLowerCase().includes("pm") && h < 12) h += 12;
-      if (tStr.toLowerCase().includes("am") && h === 12) h = 0;
+      
+      let ampm = match[3];
+      if (!ampm) {
+        // Look ahead for am/pm at the end of the string
+        const endMatch = tStr.match(/(am|pm)/i);
+        if (endMatch) ampm = endMatch[1];
+      }
+      
+      if (ampm && ampm.toLowerCase() === "pm" && h < 12) h += 12;
+      if (ampm && ampm.toLowerCase() === "am" && h === 12) h = 0;
+      
       return h * 60 + m;
     };
     

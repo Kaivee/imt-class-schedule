@@ -11010,22 +11010,22 @@
       "slotText": "HRST-A(6)\nSNS{C -403}"
     },
     {
-      "day": "Thu",
+      "day": "Sat",
       "time": "08:45 -10:00 am",
       "slotText": "DSL1-A(1)\nNK/LD{C -201}"
     },
     {
-      "day": "Thu",
+      "day": "Sat",
       "time": "10:15 -11:30 am",
       "slotText": "DSL1-A(2)\nNK/LD{C -201}"
     },
     {
-      "day": "Thu",
+      "day": "Sat",
       "time": "11:45 am -01:00 pm",
       "slotText": "DSL1-B(1)\nNK/LD{C -201}"
     },
     {
-      "day": "Thu",
+      "day": "Sat",
       "time": "02:00 -03:15 pm",
       "slotText": "DSL1-B(2)\nNK/LD{C -201}"
     }
