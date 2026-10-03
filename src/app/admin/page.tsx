@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [weeks, setWeeks] = useState<any[]>([]);
 
   const fetchWeeks = () => {
-    fetch("/api/list-weeks")
+    fetch("/api/list-weeks", { cache: "no-store" })
       .then((r) => r.json())
       .then((data) => {
         if (data.success && data.blobs) {

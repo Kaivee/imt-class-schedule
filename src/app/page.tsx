@@ -111,7 +111,7 @@ export default function Home() {
   useEffect(() => {
     localStorage.removeItem("timetable_data");
     // Fetch uploaded weeks
-    fetch("/api/list-weeks")
+    fetch("/api/list-weeks", { cache: "no-store" })
       .then(r => r.json())
       .then(data => {
         if (data.success && data.blobs) {
