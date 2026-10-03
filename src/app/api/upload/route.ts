@@ -29,7 +29,8 @@ export async function POST(request: Request) {
     // Upload directly to Vercel Blob
     const blob = await put(`schedules/${safeWeekName}.pdf`, file, {
       access: 'public',
-      addRandomSuffix: false // We overwrite if the same week name is uploaded!
+      addRandomSuffix: false, // We overwrite if the same week name is uploaded!
+      token: process.env.BLOB_READ_WRITE_TOKEN || "vercel_blob_rw_wOFkqq5uZ6RGczE7_QjpFfR5U6IREawZ4AOmszMeoGrL8QX"
     });
     
     return NextResponse.json({ success: true, url: blob.url });
