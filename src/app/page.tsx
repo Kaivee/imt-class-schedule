@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect, useRef } from "react";
 import baseData from "@/data/timetable_data.json";
 import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 
 type ScheduleSlot = {
   day: string;
