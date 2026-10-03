@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { put } from '@vercel/blob';
 
 // The simple password for the sister
-const ADMIN_PASSWORD = "password123";
+const ADMIN_PASSWORD = "imtg#05";
 
 export async function POST(request: Request) {
   try {
